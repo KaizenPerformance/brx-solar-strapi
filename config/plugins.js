@@ -4,6 +4,15 @@ module.exports = ({ env }) => ({
       jwtSecret: env('JWT_SECRET'),
     },
   },
+  'transformer': {
+    enabled: true,
+    config: {
+      responseTransforms: {
+        removeAttributesKey: true,
+        removeDataKey: true,
+      }
+    }
+  },
   upload: {
     config: {
       provider: 'cloudinary',

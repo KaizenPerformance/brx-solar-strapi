@@ -768,6 +768,88 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutCompanyAboutCompany extends Schema.SingleType {
+  collectionName: 'about_companies';
+  info: {
+    singularName: 'about-company';
+    pluralName: 'about-companies';
+    displayName: 'About Company';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    about: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    address: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        maxLength: 65;
+      }>;
+    email: Attribute.String & Attribute.Required;
+    phone: Attribute.String & Attribute.Required;
+    instagramLink: Attribute.Text;
+    facebookLink: Attribute.String;
+    linkedinLink: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-company.about-company',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-company.about-company',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Schema.SingleType {
+  collectionName: 'home_pages';
+  info: {
+    singularName: 'home-page';
+    pluralName: 'home-pages';
+    displayName: 'Home Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    mainBanner: Attribute.Media & Attribute.Required;
+    smallBanner1: Attribute.Media & Attribute.Required;
+    smallBanner2: Attribute.Media & Attribute.Required;
+    sale: Attribute.Component<'home-page.sale'>;
+    saleBanner1: Attribute.Media & Attribute.Required;
+    saleBanner2: Attribute.Media & Attribute.Required;
+    salesBanner3: Attribute.Media & Attribute.Required;
+    promotionBanner1: Attribute.Media & Attribute.Required;
+    promotionBanner2: Attribute.Media & Attribute.Required;
+    suppliers: Attribute.Media & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::home-page.home-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -786,6 +868,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::about-company.about-company': ApiAboutCompanyAboutCompany;
+      'api::home-page.home-page': ApiHomePageHomePage;
     }
   }
 }
