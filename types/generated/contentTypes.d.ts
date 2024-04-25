@@ -823,16 +823,14 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
-    mainBanner: Attribute.Media & Attribute.Required;
-    smallBanner1: Attribute.Media & Attribute.Required;
-    smallBanner2: Attribute.Media & Attribute.Required;
-    sale: Attribute.Component<'home-page.sale'>;
-    saleBanner1: Attribute.Media & Attribute.Required;
-    saleBanner2: Attribute.Media & Attribute.Required;
-    salesBanner3: Attribute.Media & Attribute.Required;
-    promotionBanner1: Attribute.Media & Attribute.Required;
-    promotionBanner2: Attribute.Media & Attribute.Required;
-    suppliers: Attribute.Media & Attribute.Required;
+    mainCarouselItems: Attribute.Component<
+      'home-page.main-carousel-items',
+      true
+    > &
+      Attribute.Required &
+      Attribute.SetMinMax<{
+        min: 1;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
