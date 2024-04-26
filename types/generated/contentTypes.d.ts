@@ -831,6 +831,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
       Attribute.SetMinMax<{
         min: 1;
       }>;
+    Brands: Attribute.Component<'home-page.brands', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

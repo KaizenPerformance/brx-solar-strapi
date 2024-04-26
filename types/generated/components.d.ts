@@ -1,5 +1,20 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface HomePageBrands extends Schema.Component {
+  collectionName: 'components_home_page_brands';
+  info: {
+    displayName: 'Brands';
+    icon: 'apps';
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    slug: Attribute.String & Attribute.Required;
+    type: Attribute.String & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+    featured: Attribute.Boolean;
+  };
+}
+
 export interface HomePageMainCarouselItems extends Schema.Component {
   collectionName: 'components_home_page_main_carousel_items';
   info: {
@@ -44,6 +59,7 @@ export interface HomePageSale extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'home-page.brands': HomePageBrands;
       'home-page.main-carousel-items': HomePageMainCarouselItems;
       'home-page.sale': HomePageSale;
     }

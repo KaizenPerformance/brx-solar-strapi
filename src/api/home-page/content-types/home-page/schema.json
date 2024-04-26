@@ -19,6 +19,12 @@
       "component": "home-page.main-carousel-items",
       "min": 1,
       "required": true
+    },
+    "Brands": {
+      "displayName": "Brands",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.brands"
     }
   }
 }
