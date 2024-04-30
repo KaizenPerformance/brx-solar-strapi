@@ -14,7 +14,21 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: [
+        'http://localhost:3000',
+        'http://127.0.0.1:1337',
+        'https://brx-solar-app.vercel.app/'
+      ],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+      keepHeaderOnError: true,
+      credentials: true,
+      maxAge: 1000 * 60 * 60 * 24 * 30
+    }
+  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',

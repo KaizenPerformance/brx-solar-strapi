@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainCarouselItems": {
+      "displayName": "MainCarouselItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.main-carousel-items",
+      "min": 1,
+      "required": true
+    },
+    "Brands": {
+      "displayName": "Brands",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.brands"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_product_colors",
+  "info": {
+    "displayName": "colors",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "colors": {
+      "type": "string"
+    }
+  }
+}

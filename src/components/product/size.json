@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_product_sizes",
+  "info": {
+    "displayName": "size",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "size": {
+      "type": "string"
+    }
+  }
+}

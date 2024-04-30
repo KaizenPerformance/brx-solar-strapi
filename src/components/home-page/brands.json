@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_home_page_brands",
+  "info": {
+    "displayName": "Brands",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "featured": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_companies",
+  "info": {
+    "singularName": "about-company",
+    "pluralName": "about-companies",
+    "displayName": "About Company"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "about": {
+      "type": "text",
+      "maxLength": 255,
+      "required": true
+    },
+    "address": {
+      "type": "text",
+      "required": true,
+      "maxLength": 65
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "instagramLink": {
+      "type": "text"
+    },
+    "facebookLink": {
+      "type": "string"
+    },
+    "linkedinLink": {
+      "type": "text"
+    }
+  }
+}

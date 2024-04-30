@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_home_page_main_carousel_items",
+  "info": {
+    "displayName": "MainCarouselItems",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "imgUrl": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "category": {
+      "type": "string"
+    },
+    "discount": {
+      "type": "integer",
+      "max": 100,
+      "min": 1
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
