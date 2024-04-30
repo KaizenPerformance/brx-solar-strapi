@@ -56,12 +56,36 @@ export interface HomePageSale extends Schema.Component {
   };
 }
 
+export interface ProductColors extends Schema.Component {
+  collectionName: 'components_product_colors';
+  info: {
+    displayName: 'colors';
+    icon: 'apps';
+  };
+  attributes: {
+    colors: Attribute.String;
+  };
+}
+
+export interface ProductSize extends Schema.Component {
+  collectionName: 'components_product_sizes';
+  info: {
+    displayName: 'size';
+    icon: 'apps';
+  };
+  attributes: {
+    size: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'home-page.brands': HomePageBrands;
       'home-page.main-carousel-items': HomePageMainCarouselItems;
       'home-page.sale': HomePageSale;
+      'product.colors': ProductColors;
+      'product.size': ProductSize;
     }
   }
 }
