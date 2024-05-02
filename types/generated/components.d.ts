@@ -56,14 +56,37 @@ export interface HomePageSale extends Schema.Component {
   };
 }
 
+export interface ProductCategories extends Schema.Component {
+  collectionName: 'components_product_categories';
+  info: {
+    displayName: 'categories';
+    icon: 'apps';
+  };
+  attributes: {
+    category: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface ProductColors extends Schema.Component {
   collectionName: 'components_product_colors';
   info: {
     displayName: 'colors';
     icon: 'apps';
+    description: '';
   };
   attributes: {
-    colors: Attribute.String;
+    color: Attribute.String;
+  };
+}
+
+export interface ProductParent extends Schema.Component {
+  collectionName: 'components_product_parents';
+  info: {
+    displayName: 'parent';
+    icon: 'apps';
+  };
+  attributes: {
+    parent: Attribute.String & Attribute.Required;
   };
 }
 
@@ -84,7 +107,9 @@ declare module '@strapi/types' {
       'home-page.brands': HomePageBrands;
       'home-page.main-carousel-items': HomePageMainCarouselItems;
       'home-page.sale': HomePageSale;
+      'product.categories': ProductCategories;
       'product.colors': ProductColors;
+      'product.parent': ProductParent;
       'product.size': ProductSize;
     }
   }

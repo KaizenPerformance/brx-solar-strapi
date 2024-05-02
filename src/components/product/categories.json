@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_product_categories",
+  "info": {
+    "displayName": "categories",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "category": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
