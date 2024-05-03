@@ -20,7 +20,9 @@ module.exports = [
       origin: [
         'http://localhost:3000',
         'http://127.0.0.1:1337',
-        'https://brx-solar-app.vercel.app/'
+        'https://brx-solar-app.vercel.app/',
+        'https://strapi-development-fb59.up.railway.app/'
+        'https://brx-solar-app.vercell.app/'
       ],
       methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
       headers: ["Content-Type", "Authorization", "Origin", "Accept"],
