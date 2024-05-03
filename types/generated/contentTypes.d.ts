@@ -875,6 +875,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     Brands: Attribute.Component<'home-page.brands', true>;
     services: Attribute.Component<'home-page.services', true>;
     offerCards: Attribute.Component<'home-page.offer-cards', true>;
+    topOfferCards: Attribute.Component<'home-page.offer-cards', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<

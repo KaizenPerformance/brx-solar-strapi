@@ -85,13 +85,13 @@ export interface HomePageServices extends Schema.Component {
       undefined,
       undefined,
       {
-        'disable-regenerate': true;
+        'disable-regenerate': false;
       }
     > &
       Attribute.CustomField<
         'plugin::strapi-advanced-uuid.uuid',
         {
-          'disable-regenerate': true;
+          'disable-regenerate': false;
         }
       >;
   };

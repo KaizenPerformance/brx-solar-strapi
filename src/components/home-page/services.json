@@ -23,7 +23,7 @@
       "type": "customField",
       "customField": "plugin::strapi-advanced-uuid.uuid",
       "options": {
-        "disable-regenerate": true
+        "disable-regenerate": false
       }
     }
   }
