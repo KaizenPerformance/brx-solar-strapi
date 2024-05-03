@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_product_parents",
+  "info": {
+    "displayName": "parent",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "parent": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

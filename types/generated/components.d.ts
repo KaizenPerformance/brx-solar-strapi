@@ -36,6 +36,20 @@ export interface HomePageMainCarouselItems extends Schema.Component {
   };
 }
 
+export interface HomePageOfferCards extends Schema.Component {
+  collectionName: 'components_home_page_offer_cards';
+  info: {
+    displayName: 'offerCards';
+    icon: 'apps';
+  };
+  attributes: {
+    title: Attribute.String;
+    text: Attribute.String;
+    navLink: Attribute.String;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface HomePageSale extends Schema.Component {
   collectionName: 'components_home_page_sales';
   info: {
@@ -56,14 +70,64 @@ export interface HomePageSale extends Schema.Component {
   };
 }
 
+export interface HomePageServices extends Schema.Component {
+  collectionName: 'components_home_page_services';
+  info: {
+    displayName: 'services';
+    icon: 'apps';
+    description: '';
+  };
+  attributes: {
+    icon: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.String & Attribute.Required;
+    serviceId: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'disable-regenerate': false;
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'disable-regenerate': false;
+        }
+      >;
+  };
+}
+
+export interface ProductCategories extends Schema.Component {
+  collectionName: 'components_product_categories';
+  info: {
+    displayName: 'categories';
+    icon: 'apps';
+  };
+  attributes: {
+    category: Attribute.String & Attribute.Required;
+  };
+}
+
 export interface ProductColors extends Schema.Component {
   collectionName: 'components_product_colors';
   info: {
     displayName: 'colors';
     icon: 'apps';
+    description: '';
   };
   attributes: {
-    colors: Attribute.String;
+    color: Attribute.String;
+  };
+}
+
+export interface ProductParent extends Schema.Component {
+  collectionName: 'components_product_parents';
+  info: {
+    displayName: 'parent';
+    icon: 'apps';
+  };
+  attributes: {
+    parent: Attribute.String & Attribute.Required;
   };
 }
 
@@ -83,8 +147,12 @@ declare module '@strapi/types' {
     export interface Components {
       'home-page.brands': HomePageBrands;
       'home-page.main-carousel-items': HomePageMainCarouselItems;
+      'home-page.offer-cards': HomePageOfferCards;
       'home-page.sale': HomePageSale;
+      'home-page.services': HomePageServices;
+      'product.categories': ProductCategories;
       'product.colors': ProductColors;
+      'product.parent': ProductParent;
       'product.size': ProductSize;
     }
   }

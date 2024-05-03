@@ -66,6 +66,17 @@
       "type": "component",
       "repeatable": true,
       "component": "product.colors"
+    },
+    "ctegories": {
+      "displayName": "categories",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.categories"
+    },
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
     }
   }
 }

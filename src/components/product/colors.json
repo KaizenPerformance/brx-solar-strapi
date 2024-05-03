@@ -2,11 +2,12 @@
   "collectionName": "components_product_colors",
   "info": {
     "displayName": "colors",
-    "icon": "apps"
+    "icon": "apps",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "colors": {
+    "color": {
       "type": "string"
     }
   }
