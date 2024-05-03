@@ -56,6 +56,21 @@ export interface HomePageSale extends Schema.Component {
   };
 }
 
+export interface HomePageServices extends Schema.Component {
+  collectionName: 'components_home_page_services';
+  info: {
+    displayName: 'services';
+    icon: 'apps';
+  };
+  attributes: {
+    icon: Attribute.String & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.String & Attribute.Required;
+    serviceId: Attribute.UID &
+      Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;
+  };
+}
+
 export interface ProductCategories extends Schema.Component {
   collectionName: 'components_product_categories';
   info: {
@@ -107,6 +122,7 @@ declare module '@strapi/types' {
       'home-page.brands': HomePageBrands;
       'home-page.main-carousel-items': HomePageMainCarouselItems;
       'home-page.sale': HomePageSale;
+      'home-page.services': HomePageServices;
       'product.categories': ProductCategories;
       'product.colors': ProductColors;
       'product.parent': ProductParent;

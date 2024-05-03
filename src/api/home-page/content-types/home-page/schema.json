@@ -25,6 +25,12 @@
       "type": "component",
       "repeatable": true,
       "component": "home-page.brands"
+    },
+    "services": {
+      "displayName": "services",
+      "type": "component",
+      "repeatable": true,
+      "component": "home-page.services"
     }
   }
 }
