@@ -36,6 +36,20 @@ export interface HomePageMainCarouselItems extends Schema.Component {
   };
 }
 
+export interface HomePageOfferCards extends Schema.Component {
+  collectionName: 'components_home_page_offer_cards';
+  info: {
+    displayName: 'offerCards';
+    icon: 'apps';
+  };
+  attributes: {
+    title: Attribute.String;
+    text: Attribute.String;
+    navLink: Attribute.String;
+    image: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface HomePageSale extends Schema.Component {
   collectionName: 'components_home_page_sales';
   info: {
@@ -61,13 +75,25 @@ export interface HomePageServices extends Schema.Component {
   info: {
     displayName: 'services';
     icon: 'apps';
+    description: '';
   };
   attributes: {
     icon: Attribute.String & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     description: Attribute.String & Attribute.Required;
-    serviceId: Attribute.UID &
-      Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;
+    serviceId: Attribute.UID<
+      undefined,
+      undefined,
+      {
+        'disable-regenerate': true;
+      }
+    > &
+      Attribute.CustomField<
+        'plugin::strapi-advanced-uuid.uuid',
+        {
+          'disable-regenerate': true;
+        }
+      >;
   };
 }
 
@@ -121,6 +147,7 @@ declare module '@strapi/types' {
     export interface Components {
       'home-page.brands': HomePageBrands;
       'home-page.main-carousel-items': HomePageMainCarouselItems;
+      'home-page.offer-cards': HomePageOfferCards;
       'home-page.sale': HomePageSale;
       'home-page.services': HomePageServices;
       'product.categories': ProductCategories;
