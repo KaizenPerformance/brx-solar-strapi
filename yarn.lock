@@ -1409,6 +1409,11 @@
     redux-thunk "^2.4.2"
     reselect "^4.1.8"
 
+"@remix-run/router@1.16.1":
+  version "1.16.1"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.16.1.tgz#73db3c48b975eeb06d0006481bde4f5f2d17d1cd"
+  integrity sha512-es2g3dq6Nb07iFxGk5GuHN20RwBZOsuDQN7izWIisUcv9r+d2C5jQxqmgkdebXgReWfiyUabcki6Fg77mSNrig==
+
 "@rushstack/node-core-library@4.1.0":
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/@rushstack/node-core-library/-/node-core-library-4.1.0.tgz#526360d4019f8bba7dd6434d6a9b6f8122507c20"
@@ -7776,7 +7781,7 @@ react-remove-scroll@^2.5.7, react-remove-scroll@^2.5.9:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
-react-router-dom@5.3.4, react-router-dom@^5.2.0:
+react-router-dom@5.3.4:
   version "5.3.4"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.3.4.tgz#2ed62ffd88cae6db134445f4a0c0ae8b91d2e5e6"
   integrity sha512-m4EqFMHv/Ih4kpcBCONHbkT68KoAeHN4p3lAGoNryfHi0dMy0kCzEZakiKRsvg5wHZ/JLrLW8o8KomWiz/qbYQ==
@@ -7788,6 +7793,14 @@ react-router-dom@5.3.4, react-router-dom@^5.2.0:
     react-router "5.3.4"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-router-dom@^6.23.1:
+  version "6.23.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.23.1.tgz#30cbf266669693e9492aa4fc0dde2541ab02322f"
+  integrity sha512-utP+K+aSTtEdbWpC+4gxhdlPFwuEfDKq8ZrPFU65bbRJY+l706qjR7yaidBpo3MSeA/fzwbXWbKBI6ftOnP3OQ==
+  dependencies:
+    "@remix-run/router" "1.16.1"
+    react-router "6.23.1"
 
 react-router@5.3.4:
   version "5.3.4"
@@ -7803,6 +7816,13 @@ react-router@5.3.4:
     react-is "^16.6.0"
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
+
+react-router@6.23.1:
+  version "6.23.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.23.1.tgz#d08cbdbd9d6aedc13eea6e94bc6d9b29cb1c4be9"
+  integrity sha512-fzcOaRF69uvqbbM7OhvQyBTFDVrrGlsFdS3AL+1KfIBtGETibHzi3FkoTRyiDJnWNc2VxrfvR+657ROHjaNjqQ==
+  dependencies:
+    "@remix-run/router" "1.16.1"
 
 react-select@5.7.0:
   version "5.7.0"
